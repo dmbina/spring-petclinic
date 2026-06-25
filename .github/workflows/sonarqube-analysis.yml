@@ -51,14 +51,6 @@ jobs:
             -Dsonar.token=${{secrets.SONAR_TOKEN}} \
             -Dsonar.qualitygate.wait=true
 
-      # Step 5: Check SonarQube Quality Gate
-      - name: SonarQube Quality Gate Check
-        uses: sonarsource/sonarqube-quality-gate-action@master
-        timeout-minutes: 5
-        env:
-          SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
-          SONAR_HOST_URL: ${{secrets.SONAR_HOST_URL}}
-
       # Step 5: Upload build artifact
       - name: Upload JAR artifact
         if: success()
