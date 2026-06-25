@@ -48,7 +48,8 @@ jobs:
             -Dsonar.projectKey=spring-petclinic \
             -Dsonar.projectName='Spring PetClinic' \
             -Dsonar.host.url=${{secrets.SONAR_HOST_URL}} \
-            -Dsonar.token=${{secrets.SONAR_TOKEN}}
+            -Dsonar.token=${{secrets.SONAR_TOKEN}} \
+            -Dsonar.qualitygate.wait=true
 
       # Step 5: Check SonarQube Quality Gate
       - name: SonarQube Quality Gate Check
