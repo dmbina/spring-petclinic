@@ -12,7 +12,7 @@ import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-public class InsecureDemo {
+public class SecureDemo {
 
 	// FIXED: no hard-coded secrets; read from environment at call time
 	private String dbUser() {
